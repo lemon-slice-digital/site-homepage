@@ -2716,6 +2716,17 @@ a.logo:hover{
 .bg-purple{ background-color: #375acc !important; }
 .bg-red{ background-color: #f1273c !important; }
 
+.bg-lemon{ background-color: #FEFBEA ;}
+.bg-lemon-light{ background-color: #FFFDF7 ;}
+.bg-splash{ background-color: #E2F4FD;}
+
+.marker {
+    display: inline;
+    background-image: linear-gradient(to bottom, transparent 60%, #B8E4FB 60%, #B8E4FB 90%, transparent 0%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* This adjusts the height of the line to be thicker or thinner */
+}
+
 .section-title{
     margin-bottom: 3px;
     font-size: 46px;
