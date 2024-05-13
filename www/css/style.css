@@ -1,87 +1,4 @@
 @charset "utf-8";
-/*------------------------------------------------------------------
-[Master Stylesheet]
-
-Project: Rhythm
-Version: 3.7.11
-Last change: 26 November 2023
-Primary use: Multipurpose Template  
--------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------
-[Table of contents]
-
-1. Fonts
-    1.1. Font Awesome
-    1.2. Font HK Grotesk
-2. Common styles
-3. Page loader
-4. Typography
-5. Buttons
-6. Forms fields
-7. Home sections
-    7.1. Header common styles
-    7.2. Scroll down icon
-    7.3. HTML5 BG VIdeo
-    7.4. Section edge svg
-    7.5. Fullwidth gallery
-    7.6. Split background
-    7.7. Float Images
-    7.8. Typed text
-    7.9. Headings styles
-8. Custom appear animation
-    8.1. Extra styles for animate.css
-9. Classic menu bar
-    9.1. Logo (in navigation panel)
-    9.2. Desktop nav
-    9.3. Mobile nav
-    9.4. Dark panel style
-10. Sections styles
-    10.1. Common
-11. Services
-12. Alternative services
-13. Team
-14. Features
-15. Alt features
-16. Counters
-17. Portfolio
-    17.1. Works filter
-    17.2. Works grid
-    17.3. Works full view
-18. Banner section
-19. Call action 1 section
-20. Call action 2 section
-21. Call action 3 section
-22. Work process
-23. Testimonial
-    23.1. Logotypes
-24. Post previews (news section)
-25. Newsletter
-26. Contact section
-    26.1. Contact form
-27. Footer
-28. Blog
-    28.1. Pagination
-    28.2. Comments
-    28.3. Sidebar
-29. Shop
-30. Pricing
-31. Shortcodes
-    31.1. Lightbox Modal
-    31.2. Owl Carousel
-    31.3. Tabs
-    31.4. Tabs minimal
-    31.5. Tabs Alternative
-    31.6. Alert messages
-    31.7. Accordion
-    31.8. Toggle
-    31.9. Progress bars
-    31.10. Font Awesome icons examples
-    31.11. Iconmonstr icons examples
-32. Intro page
-33. Skip to Content Link
-34. Morphext
-
 
 /* ==============================
    Fonts
@@ -2719,6 +2636,7 @@ a.logo:hover{
 .bg-lemon{ background-color: #FEFBEA ;}
 .bg-lemon-light{ background-color: #FFFDF7 ;}
 .bg-splash{ background-color: #E2F4FD;}
+
 
 .marker {
     display: inline;
