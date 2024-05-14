@@ -535,8 +535,8 @@ hr.white{
     transform: scale(1.0001);
 }
 .big-icon-link:hover .big-icon{
-    -webkit-transition:0 none !important;
-    transition:0 none !important;  
+    -webkit-transition:0ms none !important;
+    transition:0ms none !important;
 }
 .big-icon-link:hover .big-icon{
     -webkit-transform: scale(1.05);
@@ -2100,7 +2100,7 @@ a.logo:hover{
 .mobile-on .js-opened > .mn-has-sub > .mn-has-sub-icon-right{
     border-color: rgba(255,255,255, .4);
     -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg)
+    -moz-transform: rotate(270deg);
     transform: rotate(270deg)
 }
 .mobile-on .inner-nav li{
@@ -5282,8 +5282,8 @@ table.shopping-cart-table tr td{
     opacity: 1;
     -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
-    -webkit-transition-delay: 0;
-    transition-delay: 0;
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
 }
 .owl-animate-2{
     opacity: 0;
@@ -5298,8 +5298,8 @@ table.shopping-cart-table tr td{
     opacity: 1;
     -webkit-transform: translateY(0) scale(1) perspective(1000px) rotateX(0);
     transform: translateY(0) scale(1) perspective(1000px) rotateX(0);
-    -webkit-transition-delay: 0;
-    transition-delay: 0;
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
 }
 .owl-animate-3{
     opacity: 0;
@@ -5312,8 +5312,8 @@ table.shopping-cart-table tr td{
     opacity: 1;
     -webkit-transform: translateX(0) translateY(0) scale(1);
     transform: translateX(0) translateY(0) scale(1);
-    -webkit-transition-delay: 0;
-    transition-delay: 0;
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
 }
 @media print{
     .owl-animate-1,
