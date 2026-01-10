@@ -49,6 +49,10 @@
             background: linear-gradient(135deg, #FFFFFF 0%, #fef9c3 100%);
         }
 
+        .ambient-app-gradient {
+            background: linear-gradient(90deg, #000000 0%, #000000 50%, #ffffff 50%, #ffffff 100%);
+        }
+
         .soft-shadow {
             box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
         }
@@ -103,7 +107,8 @@
             <span class="font-bold text-lg tracking-tight">Lemon Slice <span
                     class="dark:text-slate-500" style="color: var(--text-tertiary);">Studios</span></span>
         </div>
-        <div class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-widest dark:text-slate-400" style="color: var(--text-secondary);">
+        <div class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-widest dark:text-slate-400"
+             style="color: var(--text-secondary);">
             <a href="#work" class="hover:text-yellow-600 transition">Work</a>
             <a href="#custom" class="hover:text-yellow-600 transition">Custom</a>
             <a href="#philosophy" class="hover:text-yellow-600 transition">Philosophy</a>
@@ -118,7 +123,8 @@
             Quietly useful. <br>
             <span class="text-slate-300 dark:text-slate-600">Beautifully private.</span>
         </h1>
-        <p class="text-xl md:text-2xl max-w-2xl leading-relaxed dark:text-slate-400" style="color: var(--text-secondary);">
+        <p class="text-xl md:text-2xl max-w-2xl leading-relaxed dark:text-slate-400"
+           style="color: var(--text-secondary);">
             We craft intentional <b>Android</b>™ experiences that respect your time, your battery, and your privacy. No
             noise,
             just a fresh slice of utility.
@@ -135,37 +141,43 @@
         <div class="flex justify-between items-end mb-16">
             <div>
                 <h2 class="text-4xl font-bold mb-4">The Studio Works</h2>
-                <p class="dark:text-slate-400" style="color: var(--text-secondary);">Currently live and in development.</p>
+                <p class="dark:text-slate-400" style="color: var(--text-secondary);">Currently live and in
+                    development.</p>
             </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
             <!-- App Card 1 -->
             <a href="https://www.lemonslice.de/studios/ambiance/index.html"
-               class="app-card group block p-8 rounded-[2.5rem] transition-all border hover:border-yellow-200 soft-shadow dark:bg-slate-700 dark:border-slate-600" style="background-color: var(--bg-card); border-color: var(--border-color);">
+               class="app-card group block p-8 rounded-[2.5rem] transition-all border hover:border-yellow-200 soft-shadow dark:bg-slate-700 dark:border-slate-600"
+               style="background-color: var(--bg-card); border-color: var(--border-color);">
                 <div class="flex justify-between items-start mb-12">
-                    <div class="app-icon w-20 h-20 bg-white rounded-3xl flex items-center justify-center shadow-sm transition-transform duration-500">
+                    <div class="app-icon w-20 h-20 ambient-app-gradient rounded-3xl flex items-center justify-center shadow-sm transition-transform duration-500">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 22 17">
                             <path fill="#2196F3"
                                   d="M1.02 17c-0.42 0-0.72-0.18-0.9-0.55-0.19-0.37-0.15-0.72 0.1-1.05l4-5.33c0.1-0.13 0.22-0.23 0.36-0.3 0.14-0.06 0.29-0.1 0.44-0.1 0.15 0 0.3 0.04 0.43 0.1 0.15 0.07 0.27 0.17 0.37 0.3L9.52 15h7.5l-5-6.65-1.7 2.25c-0.2 0.27-0.44 0.4-0.7 0.41-0.27 0.01-0.5-0.06-0.7-0.21-0.2-0.15-0.34-0.35-0.4-0.61-0.07-0.26 0-0.52 0.2-0.79l2.5-3.33c0.1-0.13 0.22-0.23 0.36-0.3 0.14-0.06 0.29-0.1 0.44-0.1 0.15 0 0.3 0.04 0.43 0.1 0.15 0.07 0.27 0.17 0.37 0.3l7 9.33c0.25 0.33 0.28 0.68 0.1 1.05-0.19 0.37-0.49 0.55-0.9 0.55h-18Z"/>
                             <circle fill="#FFC107" cx="18.02" cy="3" r="3"/>
                         </svg>
                     </div>
-                    <span class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Available Now</span>
+                    <span class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Available Soon</span>
                 </div>
                 <h3 class="text-3xl font-bold mb-4">Ambiance Wallpaper</h3>
-                <p class="mb-6 leading-relaxed dark:text-slate-300" style="color: var(--text-secondary);">The original dynamic theme switcher for Android. Syncs
+                <p class="mb-6 leading-relaxed dark:text-slate-300" style="color: var(--text-secondary);">The original
+                    dynamic theme switcher for Android. Syncs
                     your light and dark backgrounds automatically with system theme changes.</p>
                 <span class="text-yellow-600 font-bold group-hover:translate-x-2 inline-block transition-transform">Explore App →</span>
             </a>
 
             <!-- App Card 2 (Teaser) -->
-            <div class="p-8 rounded-[2.5rem] border border-dashed flex flex-col justify-center items-center text-center dark:bg-slate-700 dark:border-slate-600" style="background-color: var(--bg-card-alt); border-color: var(--border-color);">
+            <div class="p-8 rounded-[2.5rem] border border-dashed flex flex-col justify-center items-center text-center dark:bg-slate-700 dark:border-slate-600"
+                 style="background-color: var(--bg-card-alt); border-color: var(--border-color);">
                 <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 text-2xl grayscale opacity-30">
                     ⏳
                 </div>
-                <h3 class="text-xl font-bold dark:text-slate-500" style="color: var(--text-tertiary);">Project "Citrus"</h3>
-                <p class="text-sm max-w-[200px] dark:text-slate-500" style="color: var(--text-tertiary);">A minimal focus tool for modern workflows. Coming
+                <h3 class="text-xl font-bold dark:text-slate-500" style="color: var(--text-tertiary);">Project
+                    "Citrus"</h3>
+                <p class="text-sm max-w-[200px] dark:text-slate-500" style="color: var(--text-tertiary);">A minimal
+                    focus tool for modern workflows. Coming
                     mid-2026.</p>
             </div>
         </div>
@@ -190,11 +202,13 @@
                 conversation</a>
         </div>
         <div class="flex-1 grid grid-cols-2 gap-4">
-            <div class="h-40 rounded-3xl soft-shadow flex flex-col justify-center p-6 dark:bg-slate-800" style="background-color: var(--bg-secondary);">
+            <div class="h-40 rounded-3xl soft-shadow flex flex-col justify-center p-6 dark:bg-slate-800"
+                 style="background-color: var(--bg-secondary);">
                 <span class="font-bold block mb-2 text-slate-300 dark:text-slate-600">01</span>
                 <span class="font-semibold text-sm">Material You Design</span>
             </div>
-            <div class="h-40 rounded-3xl soft-shadow flex flex-col justify-center p-6 mt-8 dark:bg-slate-800" style="background-color: var(--bg-secondary);">
+            <div class="h-40 rounded-3xl soft-shadow flex flex-col justify-center p-6 mt-8 dark:bg-slate-800"
+                 style="background-color: var(--bg-secondary);">
                 <span class="font-bold block mb-2 text-slate-300 dark:text-slate-600">02</span>
                 <span class="font-semibold text-sm">Foldable Support</span>
             </div>
@@ -211,12 +225,14 @@
         <div class="grid md:grid-cols-2 gap-16">
             <div>
                 <h4 class="font-bold text-xl mb-4">No Data, Just Art</h4>
-                <p class="text-slate-400 dark:text-slate-500 leading-relaxed">We don't track you. We don't sell you. We don't know who you
+                <p class="text-slate-400 dark:text-slate-500 leading-relaxed">We don't track you. We don't sell you. We
+                    don't know who you
                     are. We just want to make your phone look better.</p>
             </div>
             <div>
                 <h4 class="font-bold text-xl mb-4">Digital Respect</h4>
-                <p class="text-slate-400 dark:text-slate-500 leading-relaxed">Software should be invisible to your hardware. If an app
+                <p class="text-slate-400 dark:text-slate-500 leading-relaxed">Software should be invisible to your
+                    hardware. If an app
                     drains your battery to show an ad, it's not software—it's malware.</p>
             </div>
         </div>
@@ -225,21 +241,25 @@
 
 <!-- Footer -->
 <footer class="py-20 px-6 text-center">
-    <div class="max-w-6xl mx-auto border-t pt-16 flex flex-col md:flex-row justify-between items-center gap-8 dark:border-slate-800" style="border-color: var(--border-color);">
+    <div class="max-w-6xl mx-auto border-t pt-16 flex flex-col md:flex-row justify-between items-center gap-8 dark:border-slate-800"
+         style="border-color: var(--border-color);">
         <div class="flex items-center gap-3">
             <span class="font-extrabold text-xl tracking-tighter">Lemon Slice <span
                     class="dark:text-slate-600" style="color: var(--text-tertiary);">Studios</span></span>
             <span class="text-sm dark:text-slate-600" style="color: var(--text-tertiary);">a division of lemon slice digital GmbH</span>
         </div>
-        <div class="flex gap-12 text-sm font-semibold uppercase tracking-widest dark:text-slate-500" style="color: var(--text-tertiary);">
+        <div class="flex gap-12 text-sm font-semibold uppercase tracking-widest dark:text-slate-500"
+             style="color: var(--text-tertiary);">
             <a href="privacy-policy.html" class="hover:text-slate-900 dark:hover:text-slate-300 transition">Privacy</a>
-            <a href="https://www.lemonslice.de/#privacy" class="hover:text-slate-900 dark:hover:text-slate-300 transition">Legal</a>
+            <a href="https://www.lemonslice.de/#privacy"
+               class="hover:text-slate-900 dark:hover:text-slate-300 transition">Legal</a>
             <a href="mailto:hello@lemonslice.de" class="hover:text-slate-900 dark:hover:text-slate-300 transition">Contact</a>
         </div>
     </div>
     <div class="pt-8">
         <p class="text-[11px] dark:text-slate-600" style="color: var(--text-tertiary);">© 2026 Crafted in Germany.</p>
-        <p class="text-[11px] dark:text-slate-600" style="color: var(--text-tertiary);">Android is a trademark of Google LLC.</p>
+        <p class="text-[11px] dark:text-slate-600" style="color: var(--text-tertiary);">Android is a trademark of Google
+            LLC.</p>
     </div>
 
 </footer>
