@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Slice Studios | Quietly Useful Android Apps</title>
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml"
+          href="img/lemon.svg">
+    <script async src="https://stats.lemonslice.de/script.js"
+            data-website-id="d52fe82a-9d6e-4c28-b2a2-2d618ebce72e"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+          rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .lemon-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #fef9c3 100%);
+        }
+
+        .soft-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+        }
+
+        .app-card:hover .app-icon {
+            transform: scale(1.05) translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-[#fafaf9] text-slate-900 selection:bg-yellow-200">
+
+<!-- Minimal Nav -->
+<nav class="fixed w-full z-50 px-6 py-8 bg-[#fafaf9]">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-20 h-20 flex items-center justify-center">
+                <svg width="128" height="128" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M364.804 485.03C211.01 487.492 135.444 305.222 234.41 190.442C339.02 69.1187 530.222 141.676 544.22 296.872C545.378 309.59 544.248 321.182 544.91 333.618C550.622 334.618 562.002 333.648 568.4 333.614L650.812 333.672C658.794 333.75 668.572 335.132 676.39 333.618C684.084 310.702 687.766 282.422 697.058 259.988C699.75 253.484 721.24 245.832 728.67 242.706L804.306 211.39C810.364 208.866 818.426 205.354 824.65 203.538C828.384 217.154 834.412 231.976 838.834 245.866C826.766 251.806 817.042 255.058 804.524 259.968L765.614 275.58C758.902 278.208 738.406 285.53 733.388 289.36C729.162 302.684 726.532 321.556 722.288 333.618C731.656 334.812 776.232 334.866 786.58 333.618L740.3 786.224C737.332 816.662 739.81 881.682 698.158 885.412C684.31 886.652 668.886 886.072 654.836 886.054L488.222 886.04C459.26 886.084 407.062 892.984 401.214 852.586C399.69 843.052 399.028 833.238 398.166 823.588L393.198 767.842C385.636 691.29 379.382 614.638 371.09 538.206C370.258 530.538 366.6 489.514 364.804 485.03Z"
+                          fill="#DEDEDE"/>
+                    <path d="M364.804 485.03C211.01 487.492 135.444 305.222 234.41 190.442C339.02 69.1187 530.222 141.676 544.22 296.872C545.378 309.59 544.248 321.182 544.91 333.618C541.97 333.2 533.268 333.544 529.708 333.568L499.998 333.618C494.416 333.014 475.888 333.634 469.008 333.64L399.814 333.618H353.18V338.904C346.578 342.43 290.808 399.556 279.56 413.802C303.082 432.996 329.866 445.428 360.796 444.936C363.59 454.032 365.438 475.49 364.804 485.03Z"
+                          fill="#FDC901"/>
+                    <path d="M364.804 485.03C211.01 487.492 135.444 305.222 234.41 190.442C339.02 69.1187 530.222 141.676 544.22 296.872C545.378 309.59 544.248 321.182 544.91 333.618C541.97 333.2 533.268 333.544 529.708 333.568L499.998 333.618L502.112 319.246C502.394 318.45 502.134 306.932 502.112 305.184C500.086 274.436 490.226 243.49 468.368 220.98C466.866 218.028 461.084 212.116 458.33 210.086C435.962 188.084 407.134 177.179 376.336 173.517C373.56 173.309 357.284 173.173 355.24 173.517C324.438 178.758 297.674 186.357 275.102 210.086C271.336 213.714 268.606 217.008 265.248 220.98C243.088 248.128 234.338 270.016 232.462 305.184C232.436 306.834 232.112 318.54 232.462 319.246C235.854 353.35 246.116 377.732 268.676 403.342C272.256 407.266 275.462 410.384 279.56 413.802C303.082 432.996 329.866 445.428 360.796 444.936C363.59 454.032 365.438 475.49 364.804 485.03Z"
+                          fill="#EFB204"/>
+                    <path d="M468.368 220.98C490.226 243.49 500.086 274.436 502.112 305.184C467.394 304.64 432.01 305.466 397.178 305.184C394.928 302.654 392.442 299.432 390.27 296.766C393.18 293.432 396.336 290.284 399.602 287.294C420.702 267.97 446.506 236.204 468.368 220.98Z"
+                          fill="#FDE464"/>
+                    <path d="M355.24 173.517C356.958 173.592 358.548 173.379 359.846 174.18C360.292 188.277 362.966 285.356 356.722 288.828C354.778 288.632 281.644 215.882 275.102 210.086C297.674 186.357 324.438 178.758 355.24 173.517Z"
+                          fill="#FDE464"/>
+                    <path d="M265.248 220.98C290.53 245.586 317.844 273.234 343.966 296.766C342.4 299.52 340.778 302.5 339.138 305.184C303.648 305.802 267.946 305.612 232.462 305.184C234.338 270.016 243.088 248.128 265.248 220.98Z"
+                          fill="#FDE464"/>
+                    <path d="M376.336 173.517C407.134 177.179 435.962 188.084 458.33 210.086C447.648 218.39 382.46 286.594 378.964 287.428C374.806 286.918 374.668 283.6 374.708 279.966C374.84 268.412 372.924 180.612 374.736 174.079L376.336 173.517Z"
+                          fill="#FDE464"/>
+                    <path d="M232.462 319.246L233.19 318.518C248.742 319.468 261.216 319.246 276.764 319.236L339.138 319.246C340.986 322.02 342.324 324.232 343.966 327.136C339.546 330.68 335.228 334.226 331.38 338.41C322.236 348.354 277.042 398.538 268.676 403.342C246.116 377.732 235.854 353.35 232.462 319.246Z"
+                          fill="#FDE464"/>
+                    <path d="M397.178 319.246L474.33 319.244C478.24 319.244 500.45 318.178 502.112 319.246L499.998 333.618C494.416 333.014 475.888 333.634 469.008 333.64L399.814 333.618C396.464 331.606 394.51 330.298 392.222 327.136C393.988 323.848 394.822 322.144 397.178 319.246Z"
+                          fill="#FDE464"/>
+                    <path d="M627.54 524.408L724.936 524.482C727.558 524.498 733.442 524.696 735.76 524.408C734.354 543.028 731.788 563.154 729.806 581.802L709.45 782.37C708.028 797.388 706.818 813.548 704.95 828.444H424.182C422.324 790.686 418.926 753.548 416.11 715.912L411.76 662.024C410.476 645.13 409.58 628.264 407.648 611.396C409.294 611.112 415.076 616.582 416.632 617.846C487.764 675.622 589.852 641.838 618.974 556.878C622.62 546.242 624.02 535.356 627.308 525.118L627.54 524.408Z"
+                          fill="#3b82f6"/>
+                    <path d="M399.814 524.408C410.024 523.998 423.034 524.382 433.422 524.388L584.378 524.402C598.468 524.398 613.568 524.064 627.54 524.408L627.308 525.118C624.02 535.356 622.62 546.242 618.974 556.878C589.852 641.838 487.764 675.622 416.632 617.846C415.076 616.582 409.294 611.112 407.648 611.396C402.862 592.176 402.482 546.83 399.814 524.408Z"
+                          fill="#FDC901"/>
+                    <path d="M676.39 333.618C680.19 333.002 720.542 333.31 722.288 334.834C718.248 348.982 715.064 363.66 711.544 377.998L683.89 488.446C681.178 498.894 675.924 514.244 676.39 524.408L720.122 524.362C722.778 524.354 734.136 524.014 735.76 524.408C733.442 524.696 727.558 524.498 724.936 524.482L627.54 524.408C630.31 521.55 672.254 354.112 676.39 333.618Z"
+                          fill="#C4C4C2"/>
+                    <path d="M353.18 338.904C353.172 372.526 362.69 411.69 360.796 444.936C329.866 445.428 303.082 432.996 279.56 413.802C290.808 399.556 346.578 342.43 353.18 338.904Z"
+                          fill="#FDE464"/>
+                </svg>
+            </div>
+            <span class="font-bold text-lg tracking-tight">Lemon Slice <span
+                    class="text-slate-400">Studios</span></span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-500 uppercase tracking-widest">
+            <a href="#work" class="hover:text-yellow-600 transition">Work</a>
+            <a href="#custom" class="hover:text-yellow-600 transition">Custom</a>
+            <a href="#philosophy" class="hover:text-yellow-600 transition">Philosophy</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="pt-48 px-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+            Quietly useful. <br>
+            <span class="text-slate-300">Beautifully private.</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed">
+            We craft intentional <b>Android</b>™ experiences that respect your time, your battery, and your privacy. No
+            noise,
+            just a fresh slice of utility.
+        </p>
+    </div>
+    <div class="w-48 h-32 mt-16 ml-auto mr-16">
+        <img src="img/android-head_3D.svg" class="" alt="Android Robot Head Image">
+    </div>
+</section>
+
+<!-- Portfolio -->
+<section id="work" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-16">
+            <div>
+                <h2 class="text-4xl font-bold mb-4">The Studio Works</h2>
+                <p class="text-slate-500">Currently live and in development.</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- App Card 1 -->
+            <a href="https://www.lemonslice.de/studios/ambiance/index.html"
+               class="app-card group block p-8 bg-[#fdfcf6] rounded-[2.5rem] transition-all border border-transparent hover:border-yellow-200 soft-shadow">
+                <div class="flex justify-between items-start mb-12">
+                    <div class="app-icon w-20 h-20 bg-white rounded-3xl flex items-center justify-center shadow-sm transition-transform duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 22 17">
+                            <path fill="#2196F3"
+                                  d="M1.02 17c-0.42 0-0.72-0.18-0.9-0.55-0.19-0.37-0.15-0.72 0.1-1.05l4-5.33c0.1-0.13 0.22-0.23 0.36-0.3 0.14-0.06 0.29-0.1 0.44-0.1 0.15 0 0.3 0.04 0.43 0.1 0.15 0.07 0.27 0.17 0.37 0.3L9.52 15h7.5l-5-6.65-1.7 2.25c-0.2 0.27-0.44 0.4-0.7 0.41-0.27 0.01-0.5-0.06-0.7-0.21-0.2-0.15-0.34-0.35-0.4-0.61-0.07-0.26 0-0.52 0.2-0.79l2.5-3.33c0.1-0.13 0.22-0.23 0.36-0.3 0.14-0.06 0.29-0.1 0.44-0.1 0.15 0 0.3 0.04 0.43 0.1 0.15 0.07 0.27 0.17 0.37 0.3l7 9.33c0.25 0.33 0.28 0.68 0.1 1.05-0.19 0.37-0.49 0.55-0.9 0.55h-18Z"/>
+                            <circle fill="#FFC107" cx="18.02" cy="3" r="3"/>
+                        </svg>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Available Now</span>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">Ambiance Wallpaper</h3>
+                <p class="text-slate-500 mb-6 leading-relaxed">The original dynamic theme switcher for Android. Syncs
+                    your light and dark backgrounds automatically with system theme changes.</p>
+                <span class="text-yellow-600 font-bold group-hover:translate-x-2 inline-block transition-transform">Explore App →</span>
+            </a>
+
+            <!-- App Card 2 (Teaser) -->
+            <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-dashed border-slate-200 flex flex-col justify-center items-center text-center">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 text-2xl grayscale opacity-30">
+                    ⏳
+                </div>
+                <h3 class="text-xl font-bold text-slate-400">Project "Citrus"</h3>
+                <p class="text-slate-400 text-sm max-w-[200px]">A minimal focus tool for modern workflows. Coming
+                    mid-2026.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom Dev Section -->
+<section id="custom" class="py-32 px-6">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+        <div class="flex-1">
+            <div class="inline-block px-4 py-1 bg-yellow-400 text-white font-bold text-xs uppercase tracking-tighter rounded mb-6">
+                Services
+            </div>
+            <h2 class="text-5xl font-extrabold mb-8">Need a custom slice?</h2>
+            <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                We specialize in tailored Android experiences for businesses who value quality over volume. From custom
+                system-level utilities to specialized hardware integrations, we bring our "quiet" philosophy to your
+                project.
+            </p>
+            <a href="mailto:hello@lemonslice.de"
+               class="text-xl font-bold border-b-4 border-yellow-400 pb-1 hover:text-yellow-600 transition">Start a
+                conversation</a>
+        </div>
+        <div class="flex-1 grid grid-cols-2 gap-4">
+            <div class="h-40 bg-white rounded-3xl soft-shadow flex flex-col justify-center p-6">
+                <span class="font-bold text-slate-300 block mb-2">01</span>
+                <span class="font-semibold text-sm">Material You Design</span>
+            </div>
+            <div class="h-40 bg-white rounded-3xl soft-shadow flex flex-col justify-center p-6 mt-8">
+                <span class="font-bold text-slate-300 block mb-2">02</span>
+                <span class="font-semibold text-sm">Foldable Support</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Philosophy -->
+<section id="philosophy"
+         class="py-16 px-6 pl-16 pr-16 bg-slate-900 text-white rounded-[2rem] mx-4 mb-4 overflow-hidden relative">
+
+    <div class="max-w-4xl mx-auto relative z-10">
+        <h2 class="text-4xl font-bold mb-16 text-yellow-400 italic">Our Pledge</h2>
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h4 class="font-bold text-xl mb-4">No Data, Just Art</h4>
+                <p class="text-slate-400 leading-relaxed">We don't track you. We don't sell you. We don't know who you
+                    are. We just want to make your phone look better.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-xl mb-4">Digital Respect</h4>
+                <p class="text-slate-400 leading-relaxed">Software should be invisible to your hardware. If an app
+                    drains your battery to show an ad, it's not software—it's malware.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-20 px-6 text-center">
+    <div class="max-w-6xl mx-auto border-t border-slate-100 pt-16 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-3">
+            <span class="font-extrabold text-xl tracking-tighter">Lemon Slice <span
+                    class="text-slate-400">Studios</span></span>
+            <span class="text-sm text-slate-400">a division of lemon slice digital GmbH</span>
+        </div>
+        <div class="flex gap-12 text-sm font-semibold text-slate-400 uppercase tracking-widest">
+            <a href="privacy-policy.html" class="hover:text-slate-900 transition">Privacy</a>
+            <a href="https://www.lemonslice.de/#privacy" class="hover:text-slate-900 transition">Legal</a>
+            <a href="mailto:hello@lemonslice.de" class="hover:text-slate-900 transition">Contact</a>
+        </div>
+    </div>
+    <div class="pt-8">
+        <p class="text-slate-400 text-sm">© 2026 Crafted in Germany.</p>
+        <p class="text-slate-400 text-sm">Android is a trademark of Google LLC.</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
