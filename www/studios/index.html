@@ -13,8 +13,36 @@
     <link href="../webfonts/PlusJakartaSans/stylesheet.css"
           rel="stylesheet">
     <style>
+        :root {
+            --bg-primary: #fafaf9;
+            --bg-secondary: #ffffff;
+            --bg-card: #fdfcf6;
+            --bg-card-alt: #f8fafc;
+            --text-primary: rgb(15 23 42);
+            --text-secondary: rgb(100 116 139);
+            --text-tertiary: rgb(148 163 184);
+            --border-color: #e2e8f0;
+            --border-hover: #fef08a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #0f172a;
+                --bg-secondary: #1e293b;
+                --bg-card: #1e293b;
+                --bg-card-alt: #334155;
+                --text-primary: #f1f5f9;
+                --text-secondary: #94a3b8;
+                --text-tertiary: #64748b;
+                --border-color: #334155;
+                --border-hover: #fef08a;
+            }
+        }
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
         }
 
         .lemon-gradient {
@@ -25,15 +53,21 @@
             box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
         }
 
+        @media (prefers-color-scheme: dark) {
+            .soft-shadow {
+                box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+            }
+        }
+
         .app-card:hover .app-icon {
             transform: scale(1.05) translateY(-5px);
         }
     </style>
 </head>
-<body class="bg-[#fafaf9] text-slate-900 selection:bg-yellow-200">
+<body class="selection:bg-yellow-200">
 
 <!-- Minimal Nav -->
-<nav class="fixed w-full z-50 px-6 py-8 bg-[#fafaf9]">
+<nav class="fixed w-full z-50 px-6 py-8 dark:bg-slate-900" style="background-color: var(--bg-primary);">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
         <div class="flex items-center gap-3">
             <div class="w-20 h-20 flex items-center justify-center">
@@ -67,9 +101,9 @@
                 </svg>
             </div>
             <span class="font-bold text-lg tracking-tight">Lemon Slice <span
-                    class="text-slate-400">Studios</span></span>
+                    class="dark:text-slate-500" style="color: var(--text-tertiary);">Studios</span></span>
         </div>
-        <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-500 uppercase tracking-widest">
+        <div class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-widest dark:text-slate-400" style="color: var(--text-secondary);">
             <a href="#work" class="hover:text-yellow-600 transition">Work</a>
             <a href="#custom" class="hover:text-yellow-600 transition">Custom</a>
             <a href="#philosophy" class="hover:text-yellow-600 transition">Philosophy</a>
@@ -82,9 +116,9 @@
     <div class="max-w-4xl mx-auto">
         <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">
             Quietly useful. <br>
-            <span class="text-slate-300">Beautifully private.</span>
+            <span class="text-slate-300 dark:text-slate-600">Beautifully private.</span>
         </h1>
-        <p class="text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed">
+        <p class="text-xl md:text-2xl max-w-2xl leading-relaxed dark:text-slate-400" style="color: var(--text-secondary);">
             We craft intentional <b>Android</b>™ experiences that respect your time, your battery, and your privacy. No
             noise,
             just a fresh slice of utility.
@@ -96,19 +130,19 @@
 </section>
 
 <!-- Portfolio -->
-<section id="work" class="py-24 px-6 bg-white">
+<section id="work" class="py-24 px-6 dark:bg-slate-800" style="background-color: var(--bg-secondary);">
     <div class="max-w-6xl mx-auto">
         <div class="flex justify-between items-end mb-16">
             <div>
                 <h2 class="text-4xl font-bold mb-4">The Studio Works</h2>
-                <p class="text-slate-500">Currently live and in development.</p>
+                <p class="dark:text-slate-400" style="color: var(--text-secondary);">Currently live and in development.</p>
             </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
             <!-- App Card 1 -->
             <a href="https://www.lemonslice.de/studios/ambiance/index.html"
-               class="app-card group block p-8 bg-[#fdfcf6] rounded-[2.5rem] transition-all border border-transparent hover:border-yellow-200 soft-shadow">
+               class="app-card group block p-8 rounded-[2.5rem] transition-all border hover:border-yellow-200 soft-shadow dark:bg-slate-700 dark:border-slate-600" style="background-color: var(--bg-card); border-color: var(--border-color);">
                 <div class="flex justify-between items-start mb-12">
                     <div class="app-icon w-20 h-20 bg-white rounded-3xl flex items-center justify-center shadow-sm transition-transform duration-500">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 22 17">
@@ -120,18 +154,18 @@
                     <span class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Available Now</span>
                 </div>
                 <h3 class="text-3xl font-bold mb-4">Ambiance Wallpaper</h3>
-                <p class="text-slate-500 mb-6 leading-relaxed">The original dynamic theme switcher for Android. Syncs
+                <p class="mb-6 leading-relaxed dark:text-slate-300" style="color: var(--text-secondary);">The original dynamic theme switcher for Android. Syncs
                     your light and dark backgrounds automatically with system theme changes.</p>
                 <span class="text-yellow-600 font-bold group-hover:translate-x-2 inline-block transition-transform">Explore App →</span>
             </a>
 
             <!-- App Card 2 (Teaser) -->
-            <div class="p-8 bg-slate-50 rounded-[2.5rem] border border-dashed border-slate-200 flex flex-col justify-center items-center text-center">
+            <div class="p-8 rounded-[2.5rem] border border-dashed flex flex-col justify-center items-center text-center dark:bg-slate-700 dark:border-slate-600" style="background-color: var(--bg-card-alt); border-color: var(--border-color);">
                 <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 text-2xl grayscale opacity-30">
                     ⏳
                 </div>
-                <h3 class="text-xl font-bold text-slate-400">Project "Citrus"</h3>
-                <p class="text-slate-400 text-sm max-w-[200px]">A minimal focus tool for modern workflows. Coming
+                <h3 class="text-xl font-bold dark:text-slate-500" style="color: var(--text-tertiary);">Project "Citrus"</h3>
+                <p class="text-sm max-w-[200px] dark:text-slate-500" style="color: var(--text-tertiary);">A minimal focus tool for modern workflows. Coming
                     mid-2026.</p>
             </div>
         </div>
@@ -146,7 +180,7 @@
                 Services
             </div>
             <h2 class="text-5xl font-extrabold mb-8">Need a custom slice?</h2>
-            <p class="text-lg text-slate-500 leading-relaxed mb-8">
+            <p class="text-lg leading-relaxed mb-8 dark:text-slate-400" style="color: var(--text-secondary);">
                 We specialize in tailored Android experiences for businesses who value quality over volume. From custom
                 system-level utilities to specialized hardware integrations, we bring our "quiet" philosophy to your
                 project.
@@ -156,12 +190,12 @@
                 conversation</a>
         </div>
         <div class="flex-1 grid grid-cols-2 gap-4">
-            <div class="h-40 bg-white rounded-3xl soft-shadow flex flex-col justify-center p-6">
-                <span class="font-bold text-slate-300 block mb-2">01</span>
+            <div class="h-40 rounded-3xl soft-shadow flex flex-col justify-center p-6 dark:bg-slate-800" style="background-color: var(--bg-secondary);">
+                <span class="font-bold block mb-2 text-slate-300 dark:text-slate-600">01</span>
                 <span class="font-semibold text-sm">Material You Design</span>
             </div>
-            <div class="h-40 bg-white rounded-3xl soft-shadow flex flex-col justify-center p-6 mt-8">
-                <span class="font-bold text-slate-300 block mb-2">02</span>
+            <div class="h-40 rounded-3xl soft-shadow flex flex-col justify-center p-6 mt-8 dark:bg-slate-800" style="background-color: var(--bg-secondary);">
+                <span class="font-bold block mb-2 text-slate-300 dark:text-slate-600">02</span>
                 <span class="font-semibold text-sm">Foldable Support</span>
             </div>
         </div>
@@ -170,19 +204,19 @@
 
 <!-- Philosophy -->
 <section id="philosophy"
-         class="py-16 px-6 pl-16 pr-16 bg-slate-900 text-white rounded-[2rem] mx-4 mb-4 overflow-hidden relative">
+         class="py-16 px-6 pl-16 pr-16 bg-slate-900 dark:bg-slate-950 text-white rounded-[2rem] mx-4 mb-4 overflow-hidden relative">
 
     <div class="max-w-4xl mx-auto relative z-10">
         <h2 class="text-4xl font-bold mb-16 text-yellow-400 italic">Our Pledge</h2>
         <div class="grid md:grid-cols-2 gap-16">
             <div>
                 <h4 class="font-bold text-xl mb-4">No Data, Just Art</h4>
-                <p class="text-slate-400 leading-relaxed">We don't track you. We don't sell you. We don't know who you
+                <p class="text-slate-400 dark:text-slate-500 leading-relaxed">We don't track you. We don't sell you. We don't know who you
                     are. We just want to make your phone look better.</p>
             </div>
             <div>
                 <h4 class="font-bold text-xl mb-4">Digital Respect</h4>
-                <p class="text-slate-400 leading-relaxed">Software should be invisible to your hardware. If an app
+                <p class="text-slate-400 dark:text-slate-500 leading-relaxed">Software should be invisible to your hardware. If an app
                     drains your battery to show an ad, it's not software—it's malware.</p>
             </div>
         </div>
@@ -191,21 +225,21 @@
 
 <!-- Footer -->
 <footer class="py-20 px-6 text-center">
-    <div class="max-w-6xl mx-auto border-t border-slate-100 pt-16 flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="max-w-6xl mx-auto border-t pt-16 flex flex-col md:flex-row justify-between items-center gap-8 dark:border-slate-800" style="border-color: var(--border-color);">
         <div class="flex items-center gap-3">
             <span class="font-extrabold text-xl tracking-tighter">Lemon Slice <span
-                    class="text-slate-400">Studios</span></span>
-            <span class="text-sm text-slate-400">a division of lemon slice digital GmbH</span>
+                    class="dark:text-slate-600" style="color: var(--text-tertiary);">Studios</span></span>
+            <span class="text-sm dark:text-slate-600" style="color: var(--text-tertiary);">a division of lemon slice digital GmbH</span>
         </div>
-        <div class="flex gap-12 text-sm font-semibold text-slate-400 uppercase tracking-widest">
-            <a href="privacy-policy.html" class="hover:text-slate-900 transition">Privacy</a>
-            <a href="https://www.lemonslice.de/#privacy" class="hover:text-slate-900 transition">Legal</a>
-            <a href="mailto:hello@lemonslice.de" class="hover:text-slate-900 transition">Contact</a>
+        <div class="flex gap-12 text-sm font-semibold uppercase tracking-widest dark:text-slate-500" style="color: var(--text-tertiary);">
+            <a href="privacy-policy.html" class="hover:text-slate-900 dark:hover:text-slate-300 transition">Privacy</a>
+            <a href="https://www.lemonslice.de/#privacy" class="hover:text-slate-900 dark:hover:text-slate-300 transition">Legal</a>
+            <a href="mailto:hello@lemonslice.de" class="hover:text-slate-900 dark:hover:text-slate-300 transition">Contact</a>
         </div>
     </div>
     <div class="pt-8">
-        <p class="text-slate-400 text-sm">© 2026 Crafted in Germany.</p>
-        <p class="text-slate-400 text-sm">Android is a trademark of Google LLC.</p>
+        <p class="text-[11px] dark:text-slate-600" style="color: var(--text-tertiary);">© 2026 Crafted in Germany.</p>
+        <p class="text-[11px] dark:text-slate-600" style="color: var(--text-tertiary);">Android is a trademark of Google LLC.</p>
     </div>
 
 </footer>
