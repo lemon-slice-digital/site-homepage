@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /b \"D:\\\\projects\\\\my\\\\site-homepage\")",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(bun init:*)",
+      "Bash(bun add:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(bun run build)",
+      "Bash(timeout /t 3 /nobreak)"
+    ]
+  }
+}
