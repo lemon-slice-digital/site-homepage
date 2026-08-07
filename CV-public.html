@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html data-theme="quiet" data-font-family="sans-serif">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV-public</title>
+<style>
+  /* ── Colour tokens (Theme-aware) ── */
+  
+  /* Quiet Theme - Light (Base) */
+  [data-theme="quiet"] {
+    --prose-bg:       #ffffff;
+    --prose-canvas:   #f3f0ff;
+    --prose-text:     #1d1b20;
+    --prose-muted:    #555555;
+    --prose-border:   #dfd9f2;
+    --prose-code-bg:  #f5f5f5;
+    --prose-quote-border: #aaaaaa;
+  }
+
+  /* Quiet Theme - Dark (Explicit) */
+  [data-theme="quiet"][data-color-scheme="dark"],
+  [data-theme="quiet"][data-color-scheme="system"][data-system-dark="true"] {
+    --prose-bg:       #1c1b1f;
+    --prose-canvas:   #111116;
+    --prose-text:     #e6e0e9;
+    --prose-muted:    #a09aac;
+    --prose-border:   #2e2e3e;
+    --prose-code-bg:  #2b2930;
+    --prose-quote-border: #6b6573;
+  }
+
+  /* Clean Theme - Light (Base) */
+  [data-theme="clean"] {
+    --prose-bg:       #ffffff;
+    --prose-canvas:   #f2f2f7;
+    --prose-text:     #000000;
+    --prose-muted:    #8e8e93;
+    --prose-border:   #d1d1d6;
+    --prose-code-bg:  #f2f2f7;
+    --prose-quote-border: #c7c7cc;
+  }
+
+  /* Clean Theme - Dark (Explicit) */
+  [data-theme="clean"][data-color-scheme="dark"],
+  [data-theme="clean"][data-color-scheme="system"][data-system-dark="true"] {
+    --prose-bg:       #000000;
+    --prose-canvas:   #1c1c1e;
+    --prose-text:     #ffffff;
+    --prose-muted:    #8e8e93;
+    --prose-border:   #38383a;
+    --prose-code-bg:  #1c1c1e;
+    --prose-quote-border: #38383a;
+  }
+
+  
+  @media (prefers-color-scheme: dark) {
+    [data-theme="quiet"] {
+      --prose-bg:       #1c1b1f;
+      --prose-canvas:   #111116;
+      --prose-text:     #e6e0e9;
+      --prose-muted:    #a09aac;
+      --prose-border:   #2e2e3e;
+      --prose-code-bg:  #2b2930;
+      --prose-quote-border: #6b6573;
+    }
+    [data-theme="clean"] {
+      --prose-bg:       #000000;
+      --prose-canvas:   #1c1c1e;
+      --prose-text:     #ffffff;
+      --prose-muted:    #8e8e93;
+      --prose-border:   #38383a;
+      --prose-code-bg:  #1c1c1e;
+      --prose-quote-border: #38383a;
+    }
+  }
+
+
+  /* ── Base ── */
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--prose-bg);
+    color: var(--prose-text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color-scheme: light dark;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    overscroll-behavior: none;
+  }
+
+  html[data-font-family="serif"], 
+  html[data-font-family="serif"] body,
+  html[data-font-family="serif"] h1,
+  html[data-font-family="serif"] h2,
+  html[data-font-family="serif"] h3,
+  html[data-font-family="serif"] h4,
+  html[data-font-family="serif"] h5,
+  html[data-font-family="serif"] h6,
+  html[data-font-family="serif"] .markdown-body h1,
+  html[data-font-family="serif"] .markdown-body h2,
+  html[data-font-family="serif"] .markdown-body h3 {
+    font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* ── Prose body ── */
+  .markdown-body {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    max-width: 840px; margin: 0 auto; padding: 4rem 2rem;
+  }
+
+  .markdown-body p, .markdown-body ul, .markdown-body ol,
+  .markdown-body blockquote, .markdown-body pre, .markdown-body table {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Headings ── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    line-height: 1.2;
+    color: var(--prose-text);
+  }
+  .markdown-body h1 { font-size: 2rem;   font-weight: 400; margin: 2rem 0 1rem; }
+  .markdown-body h2 { font-size: 1.5rem; font-weight: 400; margin: 1.5rem 0 1rem; }
+  .markdown-body h3 { font-size: 1.25rem; font-weight: 500; margin: 1.2rem 0 0.8rem; }
+
+  p { margin: 0 0 0.9em; }
+
+  .markdown-body strong, .markdown-body b { font-weight: 600; }
+  .markdown-body em, .markdown-body i { font-style: italic; }
+
+  .markdown-body ul, .markdown-body ol { padding-left: 1.5rem; }
+  .markdown-body li { margin-bottom: 0.5rem; }
+  .markdown-body li > p { margin-bottom: 0.25rem; }
+
+  /* ── Code ── */
+  pre, code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88em;
+  }
+  code {
+    background: var(--prose-code-bg);
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+  }
+  pre {
+    background: var(--prose-code-bg);
+    padding: 0.8em 1em;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  pre code { background: none; padding: 0; }
+
+  /* ── Blockquote ── */
+  blockquote {
+    border-left: 3px solid var(--prose-quote-border);
+    margin-left: 0;
+    padding-left: 1em;
+    color: var(--prose-muted);
+    font-style: italic;
+  }
+
+  /* ── Table ── */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  th, td {
+    border: 1px solid var(--prose-border);
+    padding: 0.4em 0.7em;
+    text-align: left;
+  }
+  th { background: var(--prose-code-bg); }
+
+  /* ── Misc ── */
+  img { max-width: 100%; height: auto; }
+
+  a { color: inherit; }
+
+  /* KaTeX MathML — block centering only; browser renders the math natively */
+  .katex-block { text-align: center; margin: 1rem 0; overflow-x: auto; }
+  .katex-block .katex { display: inline-block; }
+
+  /* ── Syntax highlighting (highlight.js) ── */
+  :root {
+    --hljs-keyword:  #6366f1;
+    --hljs-string:   #059669;
+    --hljs-comment:  #9ca3af;
+    --hljs-number:   #d97706;
+    --hljs-type:     #0891b2;
+    --hljs-builtin:  #7c3aed;
+    --hljs-attr:     #0369a1;
+    --hljs-title:    #1d4ed8;
+    --hljs-meta:     #64748b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --hljs-keyword:  #818cf8;
+      --hljs-string:   #34d399;
+      --hljs-comment:  #6b7280;
+      --hljs-number:   #fbbf24;
+      --hljs-type:     #22d3ee;
+      --hljs-builtin:  #a78bfa;
+      --hljs-attr:     #38bdf8;
+      --hljs-title:    #93c5fd;
+      --hljs-meta:     #94a3b8;
+    }
+  }
+  html[data-color-scheme="light"] {
+    --hljs-keyword:  #6366f1;
+    --hljs-string:   #059669;
+    --hljs-comment:  #9ca3af;
+    --hljs-number:   #d97706;
+    --hljs-type:     #0891b2;
+    --hljs-builtin:  #7c3aed;
+    --hljs-attr:     #0369a1;
+    --hljs-title:    #1d4ed8;
+    --hljs-meta:     #64748b;
+  }
+  html[data-color-scheme="dark"] {
+    --hljs-keyword:  #818cf8;
+    --hljs-string:   #34d399;
+    --hljs-comment:  #6b7280;
+    --hljs-number:   #fbbf24;
+    --hljs-type:     #22d3ee;
+    --hljs-builtin:  #a78bfa;
+    --hljs-attr:     #38bdf8;
+    --hljs-title:    #93c5fd;
+    --hljs-meta:     #94a3b8;
+  }
+
+  .hljs-keyword, .hljs-operator, .hljs-reserved        { color: var(--hljs-keyword); font-weight: 500; }
+  .hljs-string, .hljs-template-string,
+  .hljs-template-tag, .hljs-regexp                     { color: var(--hljs-string); }
+  .hljs-comment, .hljs-quote                            { color: var(--hljs-comment); font-style: italic; }
+  .hljs-number, .hljs-literal, .hljs-symbol,
+  .hljs-link                                            { color: var(--hljs-number); }
+  .hljs-type, .hljs-class, .hljs-variable.language_    { color: var(--hljs-type); }
+  .hljs-built_in, .hljs-function                        { color: var(--hljs-builtin); }
+  .hljs-attr, .hljs-selector-attr,
+  .hljs-selector-pseudo                                 { color: var(--hljs-attr); }
+  .hljs-title, .hljs-title.class_,
+  .hljs-title.function_                                 { color: var(--hljs-title); }
+  .hljs-meta, .hljs-selector-tag,
+  .hljs-selector-id, .hljs-selector-class              { color: var(--hljs-meta); }
+  .hljs-addition    { color: var(--hljs-string); background: color-mix(in srgb, var(--hljs-string) 12%, transparent); }
+  .hljs-deletion    { color: #ef4444; background: color-mix(in srgb, #ef4444 12%, transparent); }
+
+  .mermaid-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .task-list-item { list-style-type: none !important; }
+  .task-list-item-checkbox { margin: 0 0.5em 0.25em -1.4em !important; vertical-align: middle !important; }
+
+  
+  @page { size: A4 portrait; margin: 20mm 22mm; }
+
+  hr {
+    break-before: page;
+    border: none;
+    height: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+
+  body { background: var(--prose-bg); }
+  .markdown-body { background: var(--prose-bg); }
+
+  .pagedjs_page, .pagedjs_sheet, .pagedjs_pagebox, .pagedjs_area {
+    background: var(--prose-bg) !important;
+    color: var(--prose-text) !important;
+  }
+
+  .pagedjs_page {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    margin: 0 auto 24px;
+    border: 1px solid var(--prose-border);
+  }
+  .pagedjs_page { box-shadow: none; margin: 0; border: none; }
+
+</style>
+</head>
+<body>
+<div class="markdown-body">
+<h1><strong>Oliver Fink</strong></h1>
+<p><strong>Chief Innovation Officer · Founder, lemon slice digital GmbH</strong><br>
+Frankfurt, Germany - Fukuoka/Japan</p>
+<hr>
+<h2><strong>Profile</strong></h2>
+<p>Technology strategist and systems thinker with over three decades of experience designing durable digital platforms at the intersection of data, AI, and human-centered systems. I specialize in turning ambiguity into clear technical direction — building solutions that scale, endure organizational change, and remain understandable over time.</p>
+<p>My work spans geospatial platforms, large-scale data infrastructure, AI-driven products, and next-generation user experiences. I’m often brought in at pivotal moments to help teams and founders navigate complexity, align technology with intent, and move forward with confidence. I describe this approach as <strong>Quiet Tech</strong>: technology that empowers rather than overwhelms.</p>
+<hr>
+<h2><strong>Experience Summary</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Role / Organization</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1988</strong></td>
+<td>Independent Programmer, JMS Software</td>
+<td>Utilities and applications for the embedded SMSQ/E operating system</td>
+</tr>
+<tr>
+<td><strong>1995</strong></td>
+<td>Founder &amp; Managing Director, EcoTec Software GmbH</td>
+<td>Microsoft partner delivering enterprise training, system migrations, and early web solutions</td>
+</tr>
+<tr>
+<td><strong>2001</strong></td>
+<td>Mobile Business Architect, NobleStar Ltd (London)</td>
+<td>Web and mobile consulting across Europe and the United States</td>
+</tr>
+<tr>
+<td><strong>2003</strong></td>
+<td>Lead Engineer, Navigation Technologies BV</td>
+<td>First hybrid online/offline in-car navigation infrastructure (Honda)</td>
+</tr>
+<tr>
+<td><strong>2006</strong></td>
+<td>Lead Technical Architect, NAVTEQ BV</td>
+<td>Architected MapHub, a real-time collaborative map-editing platform</td>
+</tr>
+<tr>
+<td><strong>2009</strong></td>
+<td>Technical Manager, Nokia L&amp;C GmbH</td>
+<td>Built and launched Nokia Map Creator</td>
+</tr>
+<tr>
+<td><strong>2017</strong></td>
+<td>Senior Technical Manager, HERE GmbH &amp; Co. KG</td>
+<td>Platform leadership across globally distributed engineering teams</td>
+</tr>
+<tr>
+<td><strong>2019</strong></td>
+<td>Director Interactive Data, HERE Technologies</td>
+<td>Launched HERE XYZ; led Data Visualization &amp; ML teams; founding member, LF Urban Computing Foundation</td>
+</tr>
+<tr>
+<td><strong>2022–present</strong></td>
+<td>Founder &amp; Managing Director, lemon slice digital GmbH</td>
+<td>Strategic product innovation, AI-driven systems, and technology path-finding</td>
+</tr>
+<tr>
+<td><strong>2022–early 2023</strong></td>
+<td>Technology Partner, LevaData Inc.</td>
+<td>Architecture modernization; geospatial and AI-driven insights</td>
+</tr>
+<tr>
+<td><strong>2024–present</strong></td>
+<td>Fractional CTO, Braided Health Inc.</td>
+<td>AI-driven care management platform for complex healthcare ecosystems</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><strong>Selected Work &amp; Impact</strong></h2>
+<h3><strong>Geospatial Platforms &amp; Data Infrastructure</strong></h3>
+<p>I architected <strong>MapHub</strong>, an early real-time collaborative environment for map editing that became foundational infrastructure for multiple internal and external products. Working closely with a small, highly capable engineering team, I shaped backend services, standardized data models, and introduced interaction patterns that made large-scale spatial data tangible and editable in near real time.</p>
+<p>At Nokia, this work scaled into <strong>Nokia Map Creator</strong>, a public map-editing platform that significantly expanded global map coverage. Alongside community contribution, we built moderation, review, and partner data ingestion workflows that balanced openness with data quality.</p>
+<p>Later, I led the technical and organizational coordination required to launch <strong>HERE XYZ</strong>, a modular geospatial data platform with a low-code/no-code editor (XYZ Studio). We released the platform with both HERE and OpenStreetMap base data and open-sourced the full ecosystem — including SDKs, command-line tools, and AI/ML integrations — enabling developers to run or host their own XYZ instances.</p>
+<p>I was a founding member of the <strong>Linux Foundation Urban Computing Foundation</strong>, initially serving on the Steering Group to help shape open standards for urban data platforms.</p>
+<hr>
+<h3><strong>Platform Leadership &amp; Developer Engagement</strong></h3>
+<p>From 2017 onward, my focus expanded toward platform leadership and ecosystem development. I coordinated engineering teams across Frankfurt, Mumbai, and San Francisco, worked closely with the Open Source Program Office in Berlin, and collaborated with stakeholders across Europe and the U.S.</p>
+<p>Following the public launch of HERE XYZ, I increasingly represented the platform externally — delivering sessions and keynotes at events such as WeAreDevelopers, FOSSGIS / FOSS4G, the Linux Foundation Open Source Summit, and Embedded Linux Conference Europe. I also supported numerous hackathons and developer initiatives, helping teams turn ideas into working prototypes.</p>
+<p>In 2021, HERE decided to significantly reduce its open-source activities. As open collaboration had been a core motivator for both the teams and myself, this marked a natural transition point.</p>
+<hr>
+<h3><strong>Entrepreneurship, Open Source &amp; Quiet Tech</strong></h3>
+<p>After leaving HERE, I founded <strong>lemon slice digital GmbH</strong> to focus on building thoughtful, sustainable digital products — from bespoke web and mobile systems to AI-driven platforms. The company also maintains a fully open-source fork of <strong>XYZmaps</strong> as a geospatial and earth-observation data platform and holds the EU trademark for “XYZ maps”.</p>
+<p>To support focused exploration and product craftsmanship, lemon slice digital operates several internal initiatives:</p>
+<ul>
+<li><strong>Lemon Slice Labs</strong> — experimental R&amp;D, including evolutionary AI-assisted software development (REI Project)</li>
+<li><strong>Lemon Slice Studios</strong> — refined Android experiences and product design</li>
+<li><strong>XYZ Maps</strong> - a free and open source mapping and earth data platform</li>
+<li><strong>Ambiance</strong> — a dynamic, theme-aware Android wallpaper application</li>
+</ul>
+<hr>
+<h3><strong>AI-Driven Product Innovation</strong></h3>
+<p>As Technology Partner at <strong>LevaData</strong>, I helped modernize architecture, infrastructure, and user experience, enabling more scalable AI-driven insights.</p>
+<p>As Fractional CTO at <strong>Braided Health</strong>, I designed and guided the development of an AI-enabled care management platform supporting complex, dual-eligible healthcare environments. The work focused on augmenting care coordinators, improving system coherence, and building technology that fits the realities of healthcare delivery.</p>
+<p>I also created <strong>SenpAI</strong>, a real-time conversational and contextual AI that provides subtle, context-aware guidance during audio and video calls, currently deployed in early production environments.</p>
+<hr>
+<h2><strong>Speaking &amp; Community Engagement</strong></h2>
+<ul>
+<li>Keynotes and sessions at:
+<ul>
+<li>Linux Foundation Open Source Summit</li>
+<li>WeAreDevelopers</li>
+<li>FOSSGIS / FOSS4G</li>
+<li>Embedded Linux Conference Europe</li>
+</ul>
+</li>
+<li>Ongoing mentor and contributor at developer community events and hackathons.</li>
+</ul>
+<hr>
+<h2><strong>Links</strong></h2>
+<p><strong>Lemon Slice Digital</strong></p>
+<ul>
+<li><a href="https://www.lemonslice.de" target="_blank" rel="noopener">https://www.lemonslice.de</a></li>
+<li><a href="https://labs.lemonslice.de" target="_blank" rel="noopener">https://labs.lemonslice.de</a></li>
+<li><a href="https://studios.lemonslice.de" target="_blank" rel="noopener">https://studios.lemonslice.de</a></li>
+<li><a href="https://folio.lemonslice.de" target="_blank" rel="noopener">https://folio.lemonslice.de</a></li>
+</ul>
+<p><strong>Open Source</strong></p>
+<ul>
+<li><a href="https://github.com/xyzmaps" target="_blank" rel="noopener">https://github.com/xyzmaps</a></li>
+<li><a href="https://github.com/rei-project" target="_blank" rel="noopener">https://github.com/rei-project</a></li>
+<li><a href="https://github.com/lemonslice-studios/folio" target="_blank" rel="noopener">https://github.com/lemonslice-studios/folio</a></li>
+<li><a href="https://github.com/olifink/pypad" target="_blank" rel="noopener">https://github.com/olifink/pypad</a></li>
+<li><a href="https://github.com/olifink/rubypad" target="_blank" rel="noopener">https://github.com/olifink/rubypad</a></li>
+</ul>
+<p><strong>Historic Projects</strong></p>
+<ul>
+<li><a href="https://github.com/olifink/qspread" target="_blank" rel="noopener">https://github.com/olifink/qspread</a></li>
+<li><a href="https://github.com/olifink/ql-space" target="_blank" rel="noopener">https://github.com/olifink/ql-space</a></li>
+<li><a href="https://github.com/olifink/smsqe" target="_blank" rel="noopener">https://github.com/olifink/smsqe</a></li>
+</ul>
+<p><strong>Talks &amp; Media</strong></p>
+<ul>
+<li>Linux Foundation Keynote: <a href="https://www.youtube.com/watch?v=zJEp3GhUMkY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=zJEp3GhUMkY</a></li>
+<li>FOSS4G HERE XYZ Deep Dive: <a href="https://media.ccc.de/v/bucharest-323-here-xyz-deep-dive-on-creating-custom-web-maps" target="_blank" rel="noopener">https://media.ccc.de/v/bucharest-323-here-xyz-deep-dive-on-creating-custom-web-maps</a></li>
+</ul>
+
+</div>
+
+</body>
+</html>
