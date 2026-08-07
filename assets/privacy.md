@@ -32,11 +32,11 @@ The app stores your wallpaper preferences (such as the path to your selected ima
 
 ## **3\. Website and Analytics**
 
-To improve our services, we aggregate strictly non-identifiable browser information via our locally-hosted tools:
+To improve our services, we aggregate strictly non-identifiable browser information via tools hosted on GitHub Pages:
 
 * We track origin countries, device types, and screen sizes in aggregate.  
 * We use fully anonymized hashes as same-session identifiers. These cannot be traced back to an individual user.  
-* We host all our sites and tools locally, without the use of external hosting services or sub-processors.
+* We host all our sites and tools through GitHub Pages, without the use of external hosting services or sub-processors.
 
 ## **4\. GDPR and International Rights**
 
