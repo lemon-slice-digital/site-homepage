@@ -30,16 +30,16 @@ bun run build
 bun run preview
 ```
 
-## 🐳 Docker Deployment
+### Pulling from GitHub Container Registry (GHCR)
 
-### Using Docker
+Automated container builds are published via GitHub Actions to GHCR:
 
 ```bash
-docker build -t site-homepage:latest .
-docker run -d -p 8080:80 site-homepage:latest
+docker pull ghcr.io/lemon-slice-digital/site-homepage:latest
+docker run -d -p 8080:80 ghcr.io/lemon-slice-digital/site-homepage:latest
 ```
 
-### Using Docker Compose
+### Local Build with Docker / Docker Compose
 
 ```bash
 docker compose up -d --build
