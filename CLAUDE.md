@@ -1,50 +1,44 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance when working with code in this repository.
 
 ## Project Overview
 
-This is a static website for "lemon slice digital" - a digital consultancy. The site is built with vanilla HTML, CSS, and JavaScript (no build tools or package managers).
+This is the official website for **lemon slice digital** - a digital consultancy. The site has been modernized to use **Astro** for modularity, component reusability, and static site generation, and includes a multi-stage **Docker** container setup with Nginx for deployment.
 
 ## Directory Structure
 
-- **www/** - Production website files served to visitors
-  - `index.html` - Main homepage
-  - `css/` - Stylesheets (Bootstrap, custom styles)
-  - `js/` - JavaScript libraries and custom scripts
-  - `images/` - Site images and assets
-  - `labs/` - Labs section (separate landing page)
-  - `studios/` - Studios section (Android apps showcase, uses Tailwind)
-- **template/** - Original HTML template files (reference only, not deployed)
-- **assets/** - Source assets (privacy policy markdown, unsplash images)
-- **experiments/** - HTML experiments (baseline.html, highlight.html)
+- **src/** - Astro source files
+  - `pages/index.astro` - Main homepage (`/`)
+  - `pages/studios/` - Studios section (`/studios`, `/studios/privacy-policy`, `/studios/ambiance`)
+  - `pages/labs/` - Labs section (`/labs`, `/labs/privacy-policy`)
+  - `layouts/` - Astro page layouts (`Layout.astro`, `StudiosLayout.astro`)
+  - `components/` - Reusable Astro section components (`Nav`, `Hero`, `About`, `Services`, `Strategy`, `Productions`, `Teams`, `Process`, `Approach`, `Insights`, `Contact`, `PrivacySection`, `Footer`)
+- **public/** - Static assets (CSS, JS, images, webfonts) copied into build output (`dist/`)
+- **Dockerfile** & **nginx.conf** - Multi-stage build (Bun builder -> Nginx static server container)
+- **docker-compose.yml** - Docker Compose config for running the container on port 8080
 
-## Development
+## Development Workflow
 
-No build process - edit HTML/CSS/JS files directly. The `www/` directory is the document root.
+This project uses **Bun** as the package manager.
 
-### Key Files
+```bash
+# Start local development server
+bun run dev
 
-- `www/index.html` - Main site (Bootstrap-based, HK Grotesk font)
-- `www/css/style.css` - Primary custom styles
-- `www/css/style-responsive.css` - Responsive breakpoints
-- `www/studios/index.html` - Standalone page using Tailwind CDN and Plus Jakarta Sans font
-- `www/labs/index.html` - Standalone landing page
+# Build static bundle to dist/
+bun run build
 
-### External Dependencies (CDN/Inline)
+# Preview static build locally
+bun run preview
+```
 
-Main site uses:
-- Bootstrap 5.x (CSS + JS bundle)
-- jQuery + various plugins (parallax, lightbox, carousel, etc.)
-- Font Awesome icons
-- GSAP for animations
-- Umami analytics (stats.lemonslice.de)
+## Docker Deployment
 
-Studios section additionally uses:
-- Tailwind CSS (via CDN script)
+```bash
+# Build Docker image
+docker build -t site-homepage:latest .
 
-## Conventions
-
-- Main site navigation links to external subdomains: studios.lemonslice.de, labs.lemonslice.de
-- The site uses section-based navigation with smooth scrolling (local-scroll class)
-- Dark/light variants available in template for reference
+# Run container with Docker Compose
+docker compose up -d
+```

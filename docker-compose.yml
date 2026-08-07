@@ -1,0 +1,9 @@
+services:
+  site-homepage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lemon-slice-homepage
+    ports:
+      - "8080:80"
+    restart: unless-stopped

@@ -1,0 +1,16 @@
+.git
+.gitignore
+.astro
+.idea
+.DS_Store
+.claude
+node_modules
+dist
+template
+experiments
+tmp
+notes.txt
+Dockerfile
+docker-compose.yml
+README.md
+CLAUDE.md

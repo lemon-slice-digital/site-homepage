@@ -1,0 +1,25 @@
+---
+interface Props {
+	title?: string;
+}
+
+const { title = "Lemon Slice Studios | Quietly Useful Android Apps" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/studios/img/lemon.svg">
+    <script async src="https://stats.lemonslice.de/script.js"
+            data-website-id="8541e245-eff0-4999-a62a-1a5cdf2f11aa"></script>
+    <link rel="stylesheet" href="/studios/styles.css">
+    <link href="/studios/webfonts/PlusJakartaSans/stylesheet.css" rel="stylesheet">
+</head>
+<body class="selection:bg-yellow-200">
+    <slot />
+</body>
+</html>
